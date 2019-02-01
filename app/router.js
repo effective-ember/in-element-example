@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('details', function() {
+    this.route('nested');
+  });
 });
 
 export default Router;

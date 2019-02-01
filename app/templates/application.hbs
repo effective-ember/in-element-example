@@ -1,3 +1,22 @@
 <h2 id="title">Welcome to Ember</h2>
+<div>
+  {{#ui-elsewhere name="header" as |c|}}
+    {{c.ui.container}}
+  {{/ui-elsewhere}}
+</div>
+<div>
+  {{outlet}}
+</div>
+{{#ui-elsewhere name="modals" as |c|}}
+  {{c.ui.container}}
+{{/ui-elsewhere}}
 
-{{outlet}}
+{{#ui-elsewhere name="header" as |c|}}
+  {{#c.ui.to}}
+    <div>
+      {{#link-to "index"}}Home{{/link-to}}
+      {{#link-to "details"}}Details{{/link-to}}
+    </div>
+  {{/c.ui.to}}
+{{/ui-elsewhere}}
+

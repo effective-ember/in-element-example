@@ -1,0 +1,11 @@
+<div>Details route</div>
+{{outlet}}
+{{#ui-elsewhere name="header" as |c|}}
+  {{#c.ui.to}}
+    <div>
+      {{#link-to "index"}}Back{{/link-to}}
+      {{#link-to "details.index"}}Details - index{{/link-to}}
+      {{#link-to "details.nested"}}Details - Nested{{/link-to}}
+    </div>
+  {{/c.ui.to}}
+{{/ui-elsewhere}}
