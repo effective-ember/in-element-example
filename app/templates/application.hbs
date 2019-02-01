@@ -4,13 +4,6 @@
     {{c.ui.container}}
   {{/ui-elsewhere}}
 </div>
-<div>
-  {{outlet}}
-</div>
-{{#ui-elsewhere name="modals" as |c|}}
-  {{c.ui.container}}
-{{/ui-elsewhere}}
-
 {{#ui-elsewhere name="header" as |c|}}
   {{#c.ui.to}}
     <div>
@@ -19,4 +12,11 @@
     </div>
   {{/c.ui.to}}
 {{/ui-elsewhere}}
+<div>
+  {{outlet}}
+</div>
+{{#ui-elsewhere name="modals" as |c|}}
+  {{c.ui.container}}
+{{/ui-elsewhere}}
+
 

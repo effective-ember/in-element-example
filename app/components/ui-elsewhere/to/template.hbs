@@ -1,3 +1,6 @@
-{{#-in-element containerElement}}
-  {{yield}}
-{{/-in-element}}
+{{#if isActive}}
+  {{wat}}
+  {{#-in-element containerElement}}
+    {{yield}}
+  {{/-in-element}}
+{{/if}}
